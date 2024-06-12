@@ -1,0 +1,1 @@
+# photopea-no-ads

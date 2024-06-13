@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Photopea
+Comment=Free alternative to Photoshop
+Comment[es]=Alternativa gratuita a Photoshop
+Exec=/app/bin/photopea_no_ads.sh
+Icon=com.maxizamorano.photopea-no-ads
+Terminal=false
+Type=Application
+Categories=Graphics;Photography;

@@ -1,0 +1,60 @@
+{
+  "name": "photopea_no_ads",
+  "version": "1.0.0",
+  "description": "Alternativa gratuita a Photoshop",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "photopea",
+    "adobe",
+    "photoshop",
+    "linux"
+  ],
+  "author": "Maxi Zamorano <contacto@maxizamorano.com>",
+  "homepage": "https://www.maxizamorano.com",
+  "license": "GPL-3.0",
+  "build": {
+    "appId": "com.maxizamorano.photopea-no-ads",
+    "productName": "Photopea",
+    "extraResources": [
+      {
+        "from": "icons/",
+        "to": "icons/"
+      },
+      {
+        "from": "src/extension/no-ads",
+        "to": "extension/no-ads"
+      },
+      {
+        "from": "data/",
+        "to": "data/"
+      }
+    ],
+    "linux": {
+      "target": [
+        "deb",
+        "rpm",
+        "AppImage"
+      ],
+      "category": "Graphics",
+      "maintainer": "Maxi Zamorano <contacto@maxizamorano.com>",
+      "executableName": "photopea_no_ads",
+      "icon": "icons/photopea.png",
+      "desktop": {
+        "Name": "Photopea",
+        "Comment": "Alternativa gratuita a Photoshop",
+        "Icon": "/opt/Photopea/resources/icons/photopea.png",
+        "Terminal": "false",
+        "Type": "Application",
+        "Categories": "Graphics;Photography;"
+      }
+    }
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}

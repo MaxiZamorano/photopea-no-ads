@@ -30,10 +30,10 @@ jobs:
         run: |
           sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-      - name: Install Freedesktop SDK and Platform
+      - name: Install Freedesktop SDK and Platform (system-wide)
         run: |
-          flatpak install -y flathub org.freedesktop.Sdk//23.08
-          flatpak install -y flathub org.freedesktop.Platform//23.08
+          sudo flatpak install -y flathub org.freedesktop.Sdk//23.08
+          sudo flatpak install -y flathub org.freedesktop.Platform//23.08
 
       - name: Verify Flatpak Installation
         run: |

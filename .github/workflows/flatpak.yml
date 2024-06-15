@@ -16,10 +16,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: List files in repository
+        run: |
+          echo "Listing files in the repository root:"
+          ls -al
+
       - name: Set up Flatpak
         run: |
           sudo apt update
           sudo apt install -y flatpak flatpak-builder
+
+      - name: Verify Flatpak Installation
+        run: |
+          flatpak --version
+          flatpak-builder --version
 
       - name: Add Flathub remote
         run: |

@@ -30,10 +30,11 @@ jobs:
         run: |
           sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-      - name: Install Freedesktop SDK and Platform (system-wide)
+      - name: Install Freedesktop SDK and Platform and Node.js 20 Extension
         run: |
           sudo flatpak install -y flathub org.freedesktop.Sdk//23.08
           sudo flatpak install -y flathub org.freedesktop.Platform//23.08
+          sudo flatpak install -y flathub org.freedesktop.Sdk.Extension.node20//23.08
 
       - name: Install Electron 2 BaseApp (system-wide)
         run: |

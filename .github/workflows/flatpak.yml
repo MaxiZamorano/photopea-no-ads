@@ -35,10 +35,15 @@ jobs:
           sudo flatpak install -y flathub org.freedesktop.Sdk//23.08
           sudo flatpak install -y flathub org.freedesktop.Platform//23.08
 
+      - name: Install Electron 2 BaseApp (system-wide)
+        run: |
+          sudo flatpak install -y flathub org.electronjs.Electron2.BaseApp//23.08
+
       - name: Verify Flatpak Installation
         run: |
           flatpak --version
           flatpak-builder --version
+          flatpak list
 
       - name: Build Flatpak
         run: |

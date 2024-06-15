@@ -34,6 +34,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/MaxiZamorano/photopea-no-ads/releases/download/v1.0.0/photopea_no_ads_build.tar.gz
+        sha256: fb9c3bf9a551ae73f41ebdf5301c757d91571923826e54ee82b8ea1124284a1c
       - type: script
         dest-filename: photopea_no_ads.sh
         commands:

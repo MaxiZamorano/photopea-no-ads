@@ -37,7 +37,7 @@ jobs:
 
       - name: Build Flatpak
         run: |
-          flatpak-builder --user --install --force-clean build-dir com.maxizamorano.photopea-no-ads.yaml
+          flatpak-builder --user --install --force-clean build-dir com.maxizamorano.photopea-no-ads.yml
 
       - name: Run Flatpak Application
         run: |

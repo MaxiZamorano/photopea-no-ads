@@ -54,7 +54,4 @@ jobs:
           
       - name: Run Flatpak Application
         run: |
-          mkdir -p $XDG_RUNTIME_DIR
-          export DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
-          export $(dbus-launch)
           flatpak run com.maxizamorano.photopea-no-ads

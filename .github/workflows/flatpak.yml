@@ -52,4 +52,6 @@ jobs:
 
       - name: Run Flatpak Application
         run: |
+          export XDG_RUNTIME_DIR=/tmp/runtime-${RANDOM}
+          export $(dbus-launch)
           flatpak run com.maxizamorano.photopea-no-ads

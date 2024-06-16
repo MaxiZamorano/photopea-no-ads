@@ -51,7 +51,10 @@ jobs:
           flatpak-builder build-dir com.maxizamorano.photopea-no-ads.yml
           flatpak-builder --repo=repo --force-clean --ccache build-dir com.maxizamorano.photopea-no-ads.yml
           flatpak build-bundle repo com.maxizamorano.photopea-no-ads.flatpak com.maxizamorano.photopea-no-ads
-          flatpak install com.maxizamorano.photopea-no-ads.flatpak
+
+      - name: Install Flatpak from Bundle
+        run: |
+          flatpak install --user com.maxizamorano.photopea-no-ads.flatpak
           
       - name: Run Flatpak Application
         run: |

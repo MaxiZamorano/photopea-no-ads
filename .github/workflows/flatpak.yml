@@ -54,7 +54,7 @@ jobs:
 
       - name: Install Flatpak from Bundle
         run: |
-          flatpak install --user com.maxizamorano.photopea-no-ads.flatpak
+          flatpak install --noninteractive --user com.maxizamorano.photopea-no-ads.flatpak
           
       - name: Run Flatpak Application
         run: |

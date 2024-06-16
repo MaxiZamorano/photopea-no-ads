@@ -52,6 +52,11 @@ jobs:
           flatpak-builder --repo=repo --force-clean --ccache build-dir com.maxizamorano.photopea-no-ads.yml
           flatpak build-bundle repo com.maxizamorano.photopea-no-ads.flatpak com.maxizamorano.photopea-no-ads
 
+      - name: Set up environment for Flatpak
+        run: |
+          export XDG_RUNTIME_DIR=/tmp/runtime-${RANDOM}
+          export $(dbus-launch)
+
       - name: Install Flatpak from Bundle
         run: |
           flatpak install --noninteractive --user com.maxizamorano.photopea-no-ads.flatpak

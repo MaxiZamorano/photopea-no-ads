@@ -32,7 +32,7 @@ modules:
       - install -Dm644 /app/main/resources/data/com.maxizamorano.photopea-no-ads.metainfo.xml -t /app/share/metainfo
       - install -Dm644 /app/main/resources/icons/photopea.png /app/share/icons/hicolor/512x512/apps/com.maxizamorano.photopea-no-ads.png
     sources:
-      - type: archive
+      - type: file
         url: https://github.com/MaxiZamorano/photopea-no-ads/releases/download/v1.0.0/photopea_no_ads_build.tar.gz
         sha256: fb9c3bf9a551ae73f41ebdf5301c757d91571923826e54ee82b8ea1124284a1c
       - type: script
